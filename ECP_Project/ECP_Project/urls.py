@@ -18,6 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'portal/', include('Portal.urls')),
-    url(r'^', include('ECP_Reestr.urls'))
+    url(r'^', include('ECP_Reestr.urls')),
+    url(r'^access_request/', include('Access_Request.urls')),
 ]

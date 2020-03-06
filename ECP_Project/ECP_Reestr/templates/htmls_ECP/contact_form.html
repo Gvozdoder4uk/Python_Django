@@ -1,0 +1,15 @@
+{% extends "htmls_ECP/main_functional.html"%}
+
+{% block content %}
+    <div class="jumbotron-minimal">
+    <div class="container">
+    {% for val in values %}
+        {% if "@" in val %}
+        <p align="center"><a href="mailto:{{val}}">Отправить письмо разработчику</a></p>
+        {% else %}
+        <p align="center"><b>{{val}}</b></p>
+        {% endif %}
+    {% endfor %}
+    </div>
+    </div>
+{% endblock %}

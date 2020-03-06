@@ -1,0 +1,10 @@
+{% extends "htmls_ECP/main_functional.html"%}
+    {% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h2 class="text-info">{{articles.title}}</h2>
+        <h6>Опубликовано: {{articles.date|date:"d.m.Y"}}</h6>
+        <p>{{articles.post|safe|linebreaks}}</p>
+    </div>
+</div>
+    {% endblock %}

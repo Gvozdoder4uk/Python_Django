@@ -1,21 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Портал ЭЦП Русагротранс</title>
     {% load staticfiles %}
-    <link rel ="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/static.css' %}" type="text/css"/>
+    <script type="text/javascript" src="{% static 'css/bootstrap.min.js' %}"></script>
+    {% load static %}
 </head>
-<body style="background-image: url(https://i.pinimg.com/originals/6c/d9/ee/6cd9ee74e0fcda0e5a397ced517ecc5c.jpg)">
-<div class="btn-group btn-group-toogle">
-    <img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png">
-            <a href="/" class="btn btn-primary">Главная Страница</a>
-            <a href="//rat" class="btn btn-secondary">Портал Русагротранс</a>
-            <a href="/login" class="btn btn btn-warning">Личный Кабинет</a>
-            <a href="/about" class="btn btn-info">Узнать больше &raquo;</a>
-            </div>
+<!--START BODY--!>
+<body>
+
+<div style="background-image: linear-gradient(#0eb8e3, white);padding:.3rem 0rem;margin-bottom:1px;" class="jumbotron">
+    <a href="/"> <img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png"></a>
+    <div style="padding-top:5px; padding-left:15px; weight:100px;margin-right:400px" class="btn-group btn-group-toogle">
+        <!--<img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png">--!>
+        <a style="font-weight:bold;color:black;background-color:rgb(245,130,32);allign:right" href="/login"
+           class="btn btn btn-warning"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/keys.png' %}">Личный Кабинет</a>
+        <a style="font-weight:bold;color:black;background-color:rgb(141,198,63)" href="/access_request/keys"
+           class="btn btn-secondary"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/key.png' %}">Ключи ЭП</a>
+        <a style="font-weight:bold;color:black;background-color:rgb(141,198,63)" href="//rat" class="btn btn-secondary">Портал Русагротранс</a>
+        <a style="font-weight:bold;color:black;background-color:cyan" href="/access_request" class="btn btn-secondary">Запрос на доступ</a>
+        <a style="font-weight:bold;color:black;background-color:darkgreen" href="/access_request/news" class="btn btn-info">Новости</a>
+        <a style="font-weight:bold;color:black;background-color:rgb(67,82,90)" href="/contact" class="btn btn-secondary">Контакты</a>
+    </div>
+    <a style="background:white;vertical-align:center;padding:.3rem .7rem;" class="jumbotron">
+        <b>{% include "htmls_ECP/includes/Header.html" %}</b></a>
+
+</div>
+<img style="vertical-align:top;" SRC="{% static 'images/head_back.png'%}">
+
 {% block content %}
 {% endblock %}
+<div class="container">
+    <img src="{% static 'images/Rusagrotrans_2.jpg'%}" class="img-thumbnail">
+</div>
 
+<a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Сюда</span>
+</a>
+<a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Туда</span>
+</a>
+</div>
+</div>
+
+
+<div class="carousel-item">
+
+    <div class="carousel-caption d-none d-md-block">
+        <h5>...</h5>
+        <p>...</p>
+    </div>
+</div>
+
+<hr class="my-4">
+<p> Все права защищены Fokin@Lab 2020
+    </div>
 </body>
 </html>
+
