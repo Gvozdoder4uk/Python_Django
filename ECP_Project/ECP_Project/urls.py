@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('ECP_Reestr.urls')),
     url(r'^access_request/', include('Access_Request.urls')),
+    url(r'^login/', include('Authentification.urls')),
 ]

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div style="background-image: linear-gradient(orange, white);padding:.3rem 0rem;margin-bottom:1px;" class="jumbotron">
+        <a style="font-weight:bold;color:black;"  href="/"> <img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png"></a>
+        <a style="font-weight:bold;color:black;" href="/access_request/keys" type="button" class="btn btn-success"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/key.png' %}">Ключи ЭП</a>
+        <a style="font-weight:bold;color:black;" href="//rat"  type="button" class="btn btn-success"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/icon_rat.png' %}">Портал Русагротранс</a>
+<a style="font-weight:bold;color:black;" href="/access_request" type="button" class="btn btn-success"><img style="padding-bottom:0px" weight="25" height="25" src="{% static 'images/unlock.png' %}">Запрос на доступ</a>
+        <a style="font-weight:bold;color:black" href="/access_request/news" type="button" class="btn btn-success"><img style="padding-bottom:0px" weight="25" height="25" src="{% static 'images/news.png' %}">Новости</a>
+        <a style="font-weight:bold;color:black;" href="/contact" type="button" class="btn btn-success"><img style="padding-bottom:0px" weight="25" height="25" src="{% static 'images/contacts.png' %}">Контакты</a>
+
+
+         {% if username %}
+    <a href="/auth/login" type="button" class="btn btn-success"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/keys.png' %}">Войти</a>
+    {% else %}
+    <a href="/auth/logout" type="button" class="btn btn-success"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/keys.png' %}">Выйти {{username}}</a>
+    {% endif %}

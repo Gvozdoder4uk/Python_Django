@@ -25,21 +25,26 @@ SECRET_KEY = 'zjsl(rtu$pn)#lcg@+f58pk6+z$@53_e*gv1#qj&%-2n629n4z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','192.168.*','10.*','172.16.*-172.31.*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'ECP_Reestr',
+    'Access_Request',
     'django.contrib.admin',
+    'Authentification',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ECP_Reestr',
-    'Access_Request'
+    'crispy_forms',
+
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,7 +75,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'ECP_Project.wsgi.application'
-
+LOGIN_REDIRECT_URL = '/'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -120,3 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'webmail.rusagrotrans.ru'
+EMAIT_PORT = 25
+EMAIL_USE_TLS = False

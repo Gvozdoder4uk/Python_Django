@@ -1,65 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:background-color="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Портал ЭЦП Русагротранс</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"/>
-    <link rel="stylesheet" href="{% static 'css/static.css' %}" type="text/css"/>
-    <script type="text/javascript" src="{% static 'css/bootstrap.min.js' %}"></script>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"/>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/static.css' %}" type="text/css"/>
+    <meta charset="UTF-8">
+    <title style="font-family:Times New Roman;">IT Портал Русагротранс</title>
+    <link style="weight:10px;height:10px" rel="shortcut icon" type="image/png" href="https://media.flaticon.com/dist/min/img/favicon.ico"/>
+
+
+
 </head>
 <!--START BODY--!>
 <body>
 
-<div style="background-image: linear-gradient(#0eb8e3, white);padding:.3rem 0rem;margin-bottom:1px;" class="jumbotron">
-    <a href="/"> <img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png"></a>
-    <div style="padding-top:5px; padding-left:15px; weight:100px;margin-right:400px" class="btn-group btn-group-toogle">
-        <!--<img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png">--!>
-        <a style="font-weight:bold;color:black;background-color:rgb(245,130,32);allign:right" href="/login"
-           class="btn btn btn-warning"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/keys.png' %}">Личный Кабинет</a>
-        <a style="font-weight:bold;color:black;background-color:rgb(141,198,63)" href="/access_request/keys"
-           class="btn btn-secondary"><img style="padding-bottom:7px" weight="25" height="25" src="{% static 'images/key.png' %}">Ключи ЭП</a>
-        <a style="font-weight:bold;color:black;background-color:rgb(141,198,63)" href="//rat" class="btn btn-secondary">Портал Русагротранс</a>
-        <a style="font-weight:bold;color:black;background-color:cyan" href="/access_request" class="btn btn-secondary">Запрос на доступ</a>
-        <a style="font-weight:bold;color:black;background-color:darkgreen" href="/access_request/news" class="btn btn-info">Новости</a>
-        <a style="font-weight:bold;color:black;background-color:rgb(67,82,90)" href="/contact" class="btn btn-secondary">Контакты</a>
-    </div>
-    <a style="background:white;vertical-align:center;padding:.3rem .7rem;" class="jumbotron">
-        <b>{% include "htmls_ECP/includes/Header.html" %}</b></a>
 
-</div>
-<img style="vertical-align:top;" SRC="{% static 'images/head_back.png'%}">
+
+
+<ul style="background: #171a1f">
+    <li><a style="font-weight:bold;color:black;padding:9px 0px 0px 0px"  href="/"> <img src="https://www.rusagrotrans.ru/local/templates/main/images/logo_307x49.png"></a></li>
+  <li><a style="margin:10px 5px 10px 10px;color:white;font-weight:bold;" href="/access_request/keys" class="btn btn-success"><img style="padding-bottom:0px;padding-right:5px;" weight="25" height="25" src="{% static 'images/white-usb-hi.png' %}">Ключи ЭП</a></li>
+  <li><a style="margin:10px 5px 5px 0px;color:white;font-weight:bold;" href="//rat"  type="button" class="btn btn-success"><img style="padding-bottom:7px;padding-right:5px" weight="25" height="25" src="{% static 'images/icon_rat.png' %}">Портал Русагротранс</a></li>
+  <li><a style="margin:10px 5px 5px 0px;color:white;font-weight:bold;" href="/access_request" type="button" class="btn btn-success"><img style="padding-bottom:0px;padding-right:5px" weight="25" height="25" src="{% static 'images/lock.png' %}">Запрос на доступ</a></li>
+<li style="float:right;"><a style="margin:10px 5px 5px 0px;color:white;font-weight:bold;" href="/login" type="button" class="btn btn-success"><img style="padding-bottom:5px;padding-right:3px" weight="25" height="25" src="{% static 'images/male.png' %}">Войти в систему</a></li>
+<li style="float:right;"><a style="margin:10px 5px 5px 0px;color:white;font-weight:bold;" href="/admin" type="button" class="btn btn-success"><img style="padding-bottom:5px;padding-right:3px" weight="25" height="25" src="{% static 'images/male.png' %}">ADMIN</a>
+
+</ul>
+<img style="vertical-align;height:10px;max-width:100%" SRC="{% static 'images/head_back.png'%}">
+
 
 {% block content %}
 {% endblock %}
-<div class="container">
-    <img src="{% static 'images/Rusagrotrans_2.jpg'%}" class="img-thumbnail">
-</div>
-
-<a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Сюда</span>
-</a>
-<a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Туда</span>
-</a>
-</div>
-</div>
-
-
-<div class="carousel-item">
-
-    <div class="carousel-caption d-none d-md-block">
-        <h5>...</h5>
-        <p>...</p>
-    </div>
-</div>
 
 <hr class="my-4">
-<p> Все права защищены Fokin@Lab 2020
-    </div>
+<img style="vertical-align;height:10px;max-width:100%" SRC="{% static 'images/head_back.png'%}">
+<p><b> Все права защищены Fokin@Lab 2020</b></p>
 </body>
 </html>
 

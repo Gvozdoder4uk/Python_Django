@@ -1,10 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% load static %}
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4" >
+					<div class="card border-dark text-center" >
+						<img class="card-img-top" alt="IT_NEWS" src="{% static 'images/it_NWS.jpg' %}" />
+						<div class="card-block">
+							<h4 style="font-weight:bold;" class="card-title">
+								ИТ Новости компании
+							</h4>
+							<img style="max-width:100%;vertical-align:top;margin:0px 0px 0px 0px;" SRC="{% static 'images/head_back.png'%}">
+							<h5 class="card-text">
+								Новостной портал ИТ новостей компании.
+							</h5>
+							<p>
+								<a style="font-weight:bold;"  type="button" class="btn btn-success btn-lg btn-block" href="access_request/news">Перейти</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-dark text-center ">
+						<img style="max-width:99.9%;" class="card-img-top" alt="Возможности ИТ Портала" src="{% static 'images/abilityR.jpg' %}" />
+						<div class="card-block">
+							<h4 style="font-weight:bold;" class="card-title">
+								Возможности ИТ портала
+							</h4>
+							<img style="max-width:100%;vertical-align:top;" SRC="{% static 'images/head_back.png'%}">
+							<p class="card-text">
+								В данном разделе описаны основные возможности работы с ИТ порталом.
+							</p>
+							<p>
+								<a style="font-weight:bold;"  type="button" class="btn btn-success btn-lg btn-block" href="access_request/news">Перейти</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="card border-dark text-center" >
+						<img class="card-img-top"  src="{% static 'images/project.jpg' %}" alt="Проекты ДИТ" />
+						<div class="card-block">
+							<h4 style="font-weight:bold;;" class="card-title">
+								Текущие проекты ДИТ
+							</h4>
+							<img style="max-width:100%;vertical-align:top;" SRC="{% static 'images/head_back.png'%}">
+							<p class="card-text">
+								В данном разделе можно ознакомиться с планом реализации текущих проектов.
+							</p>
+							<p>
+								<a style="font-weight:bold;"  type="button" class="btn btn-success btn-lg btn-block" href="#">Перейти</a> <a class="btn" href="#"></a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<blockquote class="blockquote" style="float:right;">
+				<p class="mb-0">
+					"Третий Закон: Любая достаточно развитая технология неотличима от магии."
+				</p>
+				<footer class="blockquote-footer">
+					Кто-то очень великий.
+				</footer>
+			</blockquote>
+		</div>
+	</div>
+</div>
