@@ -1,0 +1,74 @@
+{% extends "htmls_ECP/main_functional.html"%}
+    {% block content %}
+{% load static %}
+<div style="font-weight:bold;" class="jumbotron">
+    <div class="container  ">
+    <h1 style="margin:0px 300px"><b>Форма заявки на доступ</b></h1>
+  <div class="form-group text-center">
+    <label style="margin:10px 300px;"><b>Фамилия Имя Отчество Заявителя</b></label>
+  <div class="form-row">
+    <div class="col">
+      <input  type="text" class="form-control text-center" placeholder="Фамилия Имя Отчество">
+    </div>
+  </div>
+  </div>
+  <hr class="my-4">
+<label><b>Блок выбора сервисов</b></label>
+
+<div style="margin:0px 300px;"class="form-check form-check-inline">
+    <input  class="form-check-input" type="checkbox" value="" id="Один Сервис">
+  <label style="margin:0px 10px" class="form-check-label" for="Один Сервис"><b>
+    Один Сервис
+  </b></label>
+    <input class="form-check-input" type="checkbox" value="" id="Множественные сервисы">
+  <label style="margin:0px 10px" class="form-check-label" for="Множественные сервисы"><b>
+    Множественные сервисы
+  </b></label>
+
+</div>
+  <img style="vertical-align;height:10px;max-width:100%" SRC="{% static 'images/head_back.png'%}">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Выбор сервиса</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>АСУ ВП</option>
+      <option>1С</option>
+      <option>Файловое Хранилище</option>
+      <option>Доступ к сайту</option>
+      <option>Разблокировка USB</option>
+      <option>Заявка на отпуск</option>
+    </select>
+  </div>
+    <img style="vertical-align;height:10px;max-width:100%" SRC="{% static 'images/head_back.png'%}">
+    <label for="АСУ ВП" ><b>Множественный выбор Сервисов</b></label>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="АСУ ВП">
+  <label class="form-check-label" for="АСУ ВП">
+    АСУ ВП
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="1С">
+  <label class="form-check-label" for="1С">
+    1С Русагротранс
+  </label>
+</div>
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="Файловое хранилище">
+  <label class="form-check-label" for="Файловое хранилище">
+    Файловое хранилище
+  </label>
+</div>
+    <img style="vertical-align;height:10px;max-width:100%" SRC="{% static 'images/head_back.png'%}">
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1"><b>Комментарии к заявке</b></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+       <a style="font-weight:bold;" type="button" class="btn btn-success btn-lg btn-block"><img  style="padding-bottom:5px;padding-right:3px" weight="35" height="35" src="{% static 'images/sign.png' %}">Запустить согласование</a>
+</div>
+
+    {% endblock %}
+</div>
